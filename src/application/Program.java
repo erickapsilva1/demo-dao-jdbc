@@ -50,6 +50,15 @@ public class Program {
 		System.out.println("Inserted. New id = " + newSeller.getId());
 		System.out.println();
 		System.out.println("------------------------");
+		
+		System.out.println("------------------------");
+		System.out.println("Update");
+		seller = sellerDao.findById(1);
+		seller.setName("Luna Silva");
+		sellerDao.update(seller);
+		seller = sellerDao.findById(1);
+		System.out.println(seller);
+		System.out.println("------------------------");
 
 	}
 
